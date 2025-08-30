@@ -20,7 +20,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("jpeg", (src) => src);
 
   // Plugins
-  eleventyConfig.addPlugin(sitemap, { sitemap: { hostname: client.url } });
+  eleventyConfig.addPlugin(sitemap, { sitemap: { hostname: client.domain } });
   if (isProduction) {
     eleventyConfig.addPlugin(eleventyMinify);
   }
