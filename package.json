@@ -1,0 +1,19 @@
+{
+  "name": "final-intermediate-kit",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx cross-env ELEVENTY_ENV=DEV eleventy --serve",
+    "build": "npx cross-env ELEVENTY_ENV=PROD eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@codestitchofficial/eleventy-plugin-minify": "^1.1.3",
+    "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
+    "autoprefixer": "^10.4.21",
+    "cross-env": "^7.0.3",
+    "cssnano": "^7.1.0",
+    "esbuild": "^0.25.8",
+    "less": "^4.2.0",
+    "postcss": "^8.5.6"
+  }
+}

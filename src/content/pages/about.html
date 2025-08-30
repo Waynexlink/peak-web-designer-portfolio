@@ -1,0 +1,117 @@
+---
+title: "About Peak Web Designs | Helping Nigerian Businesses Grow Online"
+description: "Peak Web Designs helps Nigerian businesses get online with websites, SEO, e-commerce, and Google Ads. Learn about our mission and process."
+permalink: "/about/"
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/assets/css/about.css" />
+<link rel="preload" as="image" href="{% getUrl "/assets/images/banner.webp" |
+resize({ width: 640, height: 600 }) | avif %}"/> <link rel="preload" as="image"
+href="{% getUrl "/assets/images/cta.webp" | resize({ width: 576, height: 640 })
+| avif %}"/> {% endblock %} {% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-310">
+  <div class="cs-container">
+    <span class="cs-int-title">ABOUT</span>
+    <div class="cs-breadcrumbs">
+      <a href="/" class="cs-link">Home</a>
+      <a href="/about/" class="cs-link cs-active">About</a>
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source media="(max-width: 600px)" srcset="/assets/images/banner.webp" />
+    <!--Tablet and above Image-->
+    <source media="(min-width: 601px)" srcset="/assets/images/banner.webp" />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="/assets/images/banner.webp"
+      alt="body builder"
+      width="1920"
+      height="482"
+    />
+  </picture>
+</div>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-1125">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <div class="cs-image-group">
+      <!--Main Image-->
+      <picture class="cs-picture cs-picture1">
+        <source
+          media="(max-width: 600px)"
+          srcset="/assets/images/williams.webp"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="/assets/images/williams.webp"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="/assets/images/williams.webp"
+          alt="person with box"
+          width="657"
+          height="676"
+          aria-hidden="true"
+        />
+      </picture>
+      <!--Circle Graphic-->
+      <img
+        class="cs-graphic"
+        loading="lazy"
+        decoding="async"
+        src="/assets/svgs/circle-shape.svg"
+        alt="graphic"
+        width="641"
+        height="660"
+        aria-hidden="true"
+      />
+    </div>
+    <!-- Right Content Section-->
+    <div class="cs-content">
+      <span class="cs-topper">Peak web designs</span>
+      <h2 class="cs-title">Building Digital Bridges for Nigerian Businesses</h2>
+      <p class="cs-text">
+        Hi, I'm Williams, a Computer Science graduate from UniAbuja with a
+        passion for creating websites that actually work for Nigerian
+        businesses. During my studies and early career, I noticed a troubling
+        pattern: countless talented Nigerian entrepreneurs were limiting
+        themselves to social media presence alone, completely unaware of the
+        untapped potential that professional websites could unlock for their
+        businesses.
+      </p>
+      <p class="cs-text">
+        This observation sparked my mission. While platforms like Facebook and
+        Instagram are valuable, they only capture a fraction of your potential
+        customer base. The majority of serious buyers research businesses online
+        before making purchasing decisions, and without a professional website,
+        you're invisible to this crucial market segment. That's why I've
+        dedicated my practice to building fast, mobile-optimized websites
+        specifically designed for Nigerian internet conditions and business
+        needs—helping local entrepreneurs bridge the gap between social media
+        visibility and comprehensive digital presence that drives real business
+        growth.
+      </p>
+      <a
+        class="cs-button-solid"
+        aria-label="learn more about our programs"
+        href="/blog/"
+        >Check Blog</a
+      >
+    </div>
+  </div>
+</section>
+{% include 'sections/cta.html' %} {% endblock %}

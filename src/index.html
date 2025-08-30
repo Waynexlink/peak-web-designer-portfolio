@@ -1,0 +1,719 @@
+---
+title: "Peak Web Designs | Fast, Mobile-Friendly Websites for Nigerian Businesses"
+description: "We build fast, mobile-first websites for Nigerian businesses that convert visitors into customers. Optimized for local SEO, Google ranking, and performance."
+permalink: "/"
+tags: "sitemap" 
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<!-- Critical styles are loaded first -->
+<link rel="stylesheet" href="/assets/css/critical.css" />
+
+<!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
+{% if kit.isProduction %}
+<link
+  rel="preload"
+  href="/assets/css/local.css"
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
+/>
+<noscript>
+  <link rel="stylesheet" href="/assets/css/local.css" />
+</noscript>
+
+{% else %}
+<link rel="stylesheet" href="/assets/css/local.css" />
+{% endif %}
+
+<!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
+<!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
+<!-- {% include "components/home-schema.html" %} -->
+{% endblock %} {% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1203">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Custom Coded, Custom designed </span>
+      <h1 class="cs-title">
+        Websites That Bring You Customers
+      </h1>
+      <p class="cs-text">
+       Fast, professional websites built for Nigerian businesses to look professional and get more customers through better online
+        presence .
+      </p>
+      <a href="/contact/" class="cs-button-solid">Get Started</a>
+    </div>
+    <!--To make your own background crops of people use https://www.remove.bg/-->
+    <picture class="cs-picture">
+      <source
+        media="(max-width: 600px)"
+        srcset="/assets/images/heromockup.webp"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="/assets/images/heromockup.webp"
+      />
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="./assets/images/heromockup.webp"
+        alt="accountant"
+        width="886"
+        height="842"
+      />
+    </picture>
+  </div>
+</section>
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-964">
+  <div class="cs-container">
+    <!-- Left Content Section-->
+    <div class="cs-content">
+      <span class="cs-topper">What We Do</span>
+      <h2 class="cs-title">We Build Websites That Actually Work</h2>
+      <p class="cs-text">
+        Most Nigerian businesses limit themselves to Facebook and Instagram,
+        missing customers who search Google first. I create fast,
+        mobile-friendly websites that build credibility and connect businesses
+        with searchers.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="./assets/svgs/time-fast.svg"
+            alt="hair cut"
+            width="40"
+            height="40"
+          />
+        </picture>
+        <h3 class="cs-h3">Fast Loading Speed</h3>
+        <p class="cs-item-text">
+          I build websites that load in under 1 second, so your customers don't
+          get frustrated and leave. Fast sites also rank better on Google.
+        </p>
+        <a href="/webdev/" class="cs-link">More About Web Dev</a>
+        <!--Background Image-->
+        <picture class="cs-background">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="./assets/images/Peakweb.webp"
+            alt="hair cut"
+            width="480"
+            height="425"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="./assets/svgs/mobile-hand.svg"
+            alt="hair cut"
+            width="40"
+            height="40"
+          />
+        </picture>
+        <h3 class="cs-h3">Works Great on Mobile</h3>
+        <p class="cs-item-text">
+          Most Nigerians browse on phones with limited data. Your site will look
+          perfect and load quickly on any phone or network connection.
+        </p>
+        <a href="/webdev/" class="cs-link">More on Mobile</a>
+        <!--Background Image-->
+        <picture class="cs-background">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="./assets/images/Peakweb.webp"
+            alt="hair cut"
+            width="480"
+            height="425"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="./assets/svgs/google.svg"
+            alt="hair cut"
+            width="40"
+            height="40"
+          />
+        </picture>
+        <h3 class="cs-h3">Google Visibility Boost</h3>
+        <p class="cs-item-text">
+          I help your business show up when people search for your services on
+          Google, including setting up your Google Business profile properly.
+        </p>
+        <a href="/seo/" class="cs-link">More on SEO</a>
+        <!--Background Image-->
+        <picture class="cs-background">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="./assets/images/Peakweb.webp"
+            alt="hair cut"
+            width="480"
+            height="425"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="./assets/svgs/payment-security.svg"
+            alt="hair cut"
+            width="40"
+            height="40"
+          />
+        </picture>
+        <h3 class="cs-h3">Accept Online Payments</h3>
+        <p class="cs-item-text">
+          Add secure payment options so customers can pay with debit cards,
+          credit cards, or bank transfers directly through your website.
+        </p>
+        <a href="/ecommerce/" class="cs-link">More on E-Commerce</a>
+        <!--Background Image-->
+        <picture class="cs-background">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="./assets/images/Peakweb.webp"
+            alt="hair cut"
+            width="480"
+            height="425"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="./assets/svgs/track.svg"
+            alt="hair cut"
+            width="40"
+            height="40"
+          />
+        </picture>
+        <h3 class="cs-h3">Track Your Results</h3>
+        <p class="cs-item-text">
+          Simple dashboards show you how many people visit your site, where they
+          come from, and which pages work best for your business.
+        </p>
+        <a href="/googleads/ class="cs-link">More on Google</a>
+        <!--Background Image-->
+        <picture class="cs-background">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="./assets/images/Peakweb.webp"
+            alt="hair cut"
+            width="480"
+            height="425"
+          />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="./assets/svgs/user-headset.svg"
+            alt="hair cut"
+            width="40"
+            height="40"
+          />
+        </picture>
+        <h3 class="cs-h3">Ongoing Support & Updates</h3>
+        <p class="cs-item-text">
+          I handle all the behind-the-scenes work—security updates, backups, and
+          adding new features as your business grows.
+        </p>
+        <a href="/webdev/" class="cs-link">More on Web Dev</a>
+        <!--Background Image-->
+        <picture class="cs-background">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="../assets/images/Peakweb.webp"
+            alt="hair cut"
+            width="480"
+            height="425"
+          />
+        </picture>
+      </li>
+    </ul>
+  </div>
+  <!--Waves Background-->
+  <picture class="cs-waves">
+    <source
+      media="(max-width: 600px)"
+      srcset="/assets/svgs/waves.svg"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="/assets/svgs/waves.svg"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="/assets/svgs/waves.svg"
+      alt="waves graphic"
+      width="1920"
+      height="331"
+      aria-hidden="true"
+    />
+  </picture>
+</section>
+<!-- ============================================ -->
+<!--                 Why Choose Us                -->
+<!-- ============================================ -->
+
+<section id="why-choose-1821">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper ">What We Offer</span>
+      <h2 class="cs-title">Websites Starting At <span class="cs-color">₦0 Down And ₦40k</span> Per Month</h2>
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="
+           /assets/images/websiteaudit.webp
+          "
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="
+            /assets/images/speed.webp
+          "
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="./assets/images/speed.webp"
+          alt="body builder"
+          width="562"
+          height="568"
+        />
+      </picture>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="./assets/svgs/zero-percent.svg"
+          alt="icon"
+          width="32"
+          height="32"
+        />
+        <div class="cs-item-wrapper">
+          <h3 class="cs-h3">No Money Down to Start</h3>
+          <p class="cs-item-text">
+            Begin with ₦0 upfront costs—no financial risk to get your
+            professional website.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="./assets/svgs/settings.svg"
+          alt="icon"
+          width="32"
+          height="32"
+        />
+        <div class="cs-item-wrapper">
+          <h3 class="cs-h3">I Handle Everything</h3>
+          <p class="cs-item-text">
+            All website maintenance, security, and updates are my
+            responsibility—you focus on running your business.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="./assets/svgs/convert-shapes.svg"
+          alt="icon"
+          width="32"
+          height="32"
+        />
+        <div class="cs-item-wrapper">
+          <h3 class="cs-h3">Change Anything, Anytime</h3>
+          <p class="cs-item-text">
+            Update your content, photos, and information whenever you want
+            without extra fees or waiting for a developer.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <img
+          class="cs-icon"
+          loading="lazy"
+          decoding="async"
+          src="./assets/svgs/nigeria.svg"
+          alt="icon"
+          width="32"
+          height="32"
+        />
+        <div class="cs-item-wrapper">
+          <h3 class="cs-h3">Built for Nigerian Businesses</h3>
+          <p class="cs-item-text">
+            Optimized for our internet speeds, mobile usage patterns, and local
+            customer expectations.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- ============================================ -->
+<!--                   Steps                      -->
+<!-- ============================================ -->
+
+<section id="steps-1173">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Work Process</span>
+      <h2 class="cs-title">How We Streamline Your Success</h2>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="./assets/svgs/lightbulb-red.svg"
+            alt="icon"
+            width="40"
+            height="40"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+          />
+        </picture>
+        <h3 class="cs-h3">Understand Your Business</h3>
+        <p class="cs-item-text">
+          We learn about your goals, target customers, and current online
+          challenges.
+        </p>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="./assets/svgs/puzzle-red.svg"
+            alt="icon"
+            width="40"
+            height="40"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+          />
+        </picture>
+        <h3 class="cs-h3">Build the Right Solution</h3>
+        <p class="cs-item-text">
+          Depending on your needs, we create a custom website, improve your SEO,
+          or set up e-commerce/payments.
+        </p>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="./assets/svgs/gears-red.svg"
+            alt="icon"
+            width="40"
+            height="40"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+          />
+        </picture>
+        <h3 class="cs-h3">Launch & Grow</h3>
+        <p class="cs-item-text">
+          We launch fast, connect Google + WhatsApp, and track results to help
+          you get customers consistently.
+        </p>
+      </li>
+    </ul>
+  </div>
+  <!--Tire Screech-->
+  <img
+    class="cs-graphic"
+    src="./assets/svgs/tire-mark.svg"
+    alt="icon"
+    width="840"
+    height="357"
+    loading="lazy"
+    decoding="async"
+    aria-hidden="true"
+  />
+</section>
+
+<!-- ============================================ -->
+<!--                    FAQ                       -->
+<!-- ============================================ -->
+
+<section id="faq-254">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">FAQ’s</span>
+      <h2 class="cs-title">Frequently Asked Questions</h2>
+      <p class="cs-text">
+        We know business owners have real concerns before investing in a
+        website. Here are straight answers to the most common ones.
+      </p>
+    </div>
+    <div class="cs-flex-group">
+      <ul class="cs-faq-group">
+        <!-- Active class added as default -->
+        <li class="cs-faq-item active">
+          <button class="cs-button">
+            Why should I pay monthly instead of a one-time fee?
+          </button>
+          <p class="cs-item-p">
+            A monthly plan covers hosting, updates, security, and unlimited
+            changes. With one-time sites, you often pay extra later for fixes or
+            upgrades.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            How long does it take to build my website?
+          </button>
+          <p class="cs-item-p">
+            Most business websites are completed in 1–2 weeks, depending on how
+            fast you provide your content and feedback. E-commerce projects may
+            take 2–4 weeks.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            What if my website doesn’t bring me new customers?
+          </button>
+          <p class="cs-item-p">
+            Our focus is results, not just design. We optimize your site for
+            Google and WhatsApp leads. If you don’t get inquiries in 90 days, we
+            extend support free.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            How soon will I start seeing results?
+          </button>
+          <p class="cs-item-p">
+            If you play your cards right most clients start receiving calls,
+            WhatsApp inquiries, or Google visibility within the first 4–6 weeks
+            after launch.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            Do I have to manage the website myself?
+          </button>
+          <p class="cs-item-p">
+            No. We take care of all updates, edits, and technical work. You just
+            focus on your business while we handle the tech.
+          </p>
+        </li>
+      </ul>
+      <div class="cs-cta">
+        <h3 class="cs-h3">Don’t see the answer you need?</h3>
+        <p class="cs-cta-p">
+          That’s ok. Just drop a message and we will get back to you ASAP.
+        </p>
+        <a href="/contact/" class="cs-button-solid">Contact us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include 'sections/pricing.html' %}
+<!-- ============================================ -->
+<!--                    Blog                      -->
+<!-- ============================================ -->
+
+<section id="blog-985">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">Our Blog </span>
+        <h2 class="cs-title">
+          Latest Tips to Make Your Business Online Presense Stand Out
+        </h2>
+      </div>
+      <a href="/blog/" class="cs-button-solid">View All</a>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              /assets/images/blog/instagram.webp
+            "
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/blog/instagram.webp"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/assets/images/blog/instagram.webp"
+            alt="stylist"
+            width="413"
+            height="480"
+          />
+        </picture>
+        <div class="cs-info">
+          <span class="cs-date">
+            <img
+              class="cs-icon"
+              loading="lazy"
+              decoding="async"
+              src="./assets/svgs/calendar.svg"
+              alt="stylist"
+              width="20"
+              height="20"
+            />
+            27 Aug, 2025
+          </span>
+          <h3 class="cs-h3">
+            Why Your Instagram Page Alone Is Not Enough for Your Business in
+            Nigeria
+          </h3>
+          <span class="cs-desc">
+            Slow websites cost Nigerian businesses sales, ads, and Google
+            rankings. Learn why speed matters an...
+          </span>
+          <a href="/why-your-instagram-isnt-enough/" class="cs-link"
+            >Read Blog post</a
+          >
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/blog/morecustomers.webp"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/blog/morecustomers.webp"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/assets/images/blog/morecustomers.webp"
+            alt="stylist"
+            width="413"
+            height="480"
+          />
+        </picture>
+        <div class="cs-info">
+          <span class="cs-date">
+            <img
+              class="cs-icon"
+              loading="lazy"
+              decoding="async"
+              src="./assets/svgs/calendar.svg"
+              alt="stylist"
+              width="20"
+              height="20"
+            />
+            28 Aug, 2025
+          </span>
+          <h3 class="cs-h3">
+            5 Ways Nigerian Businesses Can Get More Customers from Google
+          </h3>
+          <span class="cs-desc">
+            Most Nigerians search Google before buying, but many businesses
+            don’t show up. Here are 5 sim...
+          </span>
+          <a href="/get-more-customers/" class="cs-link">Read Blog post</a>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/blog/slow.webp"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/blog/slow.webp"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="./assets/images/blog/slow.webp"
+            alt="stylist"
+            width="413"
+            height="480"
+          />
+        </picture>
+        <div class="cs-info">
+          <span class="cs-date">
+            <img
+              class="cs-icon"
+              loading="lazy"
+              decoding="async"
+              src="./assets/svgs/calendar.svg"
+              alt="stylist"
+              width="20"
+              height="20"
+            />
+            28 Aug, 2025
+          </span>
+          <h3 class="cs-h3">Why Slow Websites Lose You Sales in Nigeria</h3>
+          <span class="cs-desc">
+            Slow websites cost Nigerian businesses sales, ads, and Google
+            rankings. Learn why speed mat...
+          </span>
+          <a href="/slow-web-lose-sales/" class="cs-link">Read Blog post</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{% include 'sections/cta.html' %} {% endblock %}

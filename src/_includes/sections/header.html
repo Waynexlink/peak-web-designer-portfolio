@@ -1,0 +1,95 @@
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <a href="/" class="cs-logo" aria-label="back to home">
+            <img src="/assets/svgs/logo-black.svg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li">
+                        <a href="/" class="cs-li-link {% if page.url == "/" %} cs-active {% endif %}">
+                            HOME
+                        </a>
+                    </li>
+                    
+                    <li class="cs-li">
+                        <a href="/about/" class="cs-li-link {% if page.url == "/about/" %} cs-active {% endif %}">
+                            ABOUT
+                        </a>
+                    </li>
+                     <li class="cs-li cs-dropdown">
+                        <span class="cs-li-link {% if page.url == "/webdev/" or page.url == "/seo/" or page.url == "/ecommerce/" or page.url == "/googleads/" %} cs-active {% endif %}">
+                            SERVICES
+                            <img class="cs-drop-icon" src="/assets/svgs/dropdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <a href="/webdev/" class="cs-li-link cs-drop-link">WEB DEVELOPMENT</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/seo/" class="cs-li-link cs-drop-link">SEO</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/ecommerce/" class="cs-li-link cs-drop-link">ECOMMERCE</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/googleads/" class="cs-li-link cs-drop-link">GOOGLE ADS PPC</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li cs-dropdown">
+                        <span class="cs-li-link {% if page.url == "/abuja/" or page.url == "/lagos/" %} cs-active {% endif %}">
+                            TOP LOCATIONS
+                            <img class="cs-drop-icon" src="/assets/svgs/dropdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <a href="/abuja/" class="cs-li-link cs-drop-link">ABUJA</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/lagos/" class="cs-li-link cs-drop-link">LAGOS</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/pricing/" class="cs-li-link {% if page.url == "/pricing/" %} cs-active {% endif %}">
+                            PRICING
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/blog/" class="cs-li-link {% if page.url == "/blog/" %} cs-active {% endif %}">
+                            BLOG
+                        </a>
+                    </li>
+                    <li class="cs-li cs-hide-on-desktop">
+                        <a href="/contact/" class="cs-li-link {% if page.url == "/contact/" %} cs-active {% endif %}">
+                            CONTACT
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <a href="/contact/" class="cs-button-solid cs-nav-button">Contact Us</a>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <img class="cs-moon" aria-hidden="true" src="/assets/svgs/moon.svg" decoding="async" alt="moon" width="15" height="15">
+            <img class="cs-sun" aria-hidden="true" src="/assets/svgs/sun.svg" decoding="async" alt="sun" width="15" height="15">
+        </button>
+    </div>
+</header>

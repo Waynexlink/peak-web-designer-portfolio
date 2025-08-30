@@ -1,0 +1,47 @@
+---
+title: "Website Pricing Plans | Peak Web Designs Nigeria"
+description: "Affordable website design and SEO packages for Nigerian businesses. Pay monthly or one-time. Get online without breaking the bank."
+permalink: "/pricing/"
+---
+
+{% extends "layouts/base.html" %} {% block head %}<meta
+  name="robots"
+  content="noindex, nofollow"
+/>
+{% endblock %} {% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-310">
+  <div class="cs-container">
+    <span class="cs-int-title">PRICING</span>
+    <div class="cs-breadcrumbs">
+      <a href="/" class="cs-link">Home</a>
+      <a href="/pricing/" class="cs-link cs-active">Pricing</a>
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <!--Mobile Image-->
+    <source media="(max-width: 600px)" srcset="/assets/images/banner.webp" />
+    <!--Tablet and above Image-->
+    <source media="(min-width: 601px)" srcset="/assets/images/banner.webp" />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="/assets/images/banner.webp"
+      alt="body builder"
+      width="1920"
+      height="482"
+    />
+  </picture>
+</div>
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+{% include 'sections/pricing.html' %} {% include 'sections/cta.html' %} {%
+endblock %}
