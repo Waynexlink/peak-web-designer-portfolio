@@ -2,7 +2,7 @@
 title: Why Slow Websites Lose You Sales in Nigeria
 url: slow-web-lose-sales
 description: Slow websites cost Nigerian businesses sales, ads, and Google rankings. Learn why speed matters and
-author: Willimas Anetor
+author: Williams Anetor
 date: 2025-08-28T15:27:34.591Z
 tags:
   - post

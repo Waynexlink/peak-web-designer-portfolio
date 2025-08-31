@@ -1,7 +1,7 @@
 ---
 title: "Contact Peak Web Designs | Start Your Website Project Today"
 description: "Let’s build your website. Contact Peak Web Designs for web development, SEO, e-commerce, and Google Ads services in Nigeria."
-permalink: "/contact/"
+permalink: " /contact/"
 ---
 
 {% extends "layouts/base.html" %} {% block head %}
@@ -20,7 +20,7 @@ href="{% getUrl "/assets/images/cta.webp" | resize({ width: 576, height: 640 })
     <span class="cs-int-title">CONTACT US</span>
     <div class="cs-breadcrumbs">
       <a href="/" class="cs-link">Home</a>
-      <a href="/contact/" class="cs-link cs-active">Contact Us</a>
+      <a href=" /contact/" class="cs-link cs-active">Contact Us</a>
     </div>
   </div>
   <!--Background Image-->
@@ -51,12 +51,16 @@ href="{% getUrl "/assets/images/cta.webp" | resize({ width: 576, height: 640 })
         <span class="cs-topper">Contact</span>
         <h2 class="cs-title">Get in Touch</h2>
         <p class="cs-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus
-          elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices
-          odio pulvinar. Sed ut.
+          Have a question or ready to start your project? Fill the form below or
+          chat with us on WhatsApp.
         </p>
       </div>
-      <form id="cs-form-265" name="Contact Form" method="post">
+      <form
+        id="cs-form-265"
+        name="Contact Form"
+        method="post"
+        data-netlify="true"
+      >
         <label>
           Name
           <input
