@@ -205,3 +205,79 @@
     }
   }
 }
+/*-- -------------------------- -->
+<---           Video            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #video-571 {
+    padding: var(--sectionPadding);
+
+    .cs-container {
+      width: 100%;
+      max-width: (1280/16rem);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+
+    .cs-content {
+      text-align: left;
+      width: 100%;
+      max-width: (1104/16rem);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      /* 20px - 44px */
+      gap: clamp(1.25rem, 5vw, 2.75rem);
+    }
+
+    .cs-video-title {
+      /* 31px - 39px */
+      font-size: clamp(1.9375rem, 6vw, 2.4375rem);
+      font-weight: 900;
+      line-height: 1.2em;
+      text-align: inherit;
+      margin: 0;
+      color: var(--headerColor);
+      position: relative;
+    }
+
+    .cs-video-wrapper {
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cs-video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode {
+    #video-571 {
+      .cs-video-title,
+      .cs-text {
+        color: var(--bodyTextColorWhite);
+      }
+
+      .cs-text {
+        opacity: 0.8;
+      }
+    }
+  }
+}

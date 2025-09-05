@@ -94,7 +94,28 @@
     >
 
     {% include "sections/header.html" %}
-    <main id="main">{% block body %}{% endblock %}</main>
+    <main id="main">
+      {% block body %}{% endblock %}
+      <!-- ============================================ -->
+      <!--               WhatsApp Button                -->
+      <!-- ============================================ -->
+
+      <a
+        href=" https://wa.me/message/Y67VCKHLQYXRI1"
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="Chat on WhatsApp"
+      >
+        <img
+          src="/assets/svgs/icons8-whatsapp.gif"
+          alt="WhatsApp"
+          width="40"
+          height="40"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+    </main>
     {% include "sections/footer.html" %}
   </body>
 </html>
